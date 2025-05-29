@@ -128,7 +128,7 @@ func main() {
 func handleRequest(parsedReq *Request, s *Server) Response {
 	var response Response
 
-	var contentType string
+	var contentType string = "text/html"
 	fileExtension := filepath.Ext(parsedReq.path)
 	if fileExtension != "" {
 		contentType = getContentType(fileExtension)
